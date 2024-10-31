@@ -4,7 +4,9 @@ import withdraw from "../assets/withdraw.svg";
 import history from "../assets/history.svg";
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import Footer from "../components/Footer";
+import Footer from "./Footer";
+import CountdownTimer from "../components/CountdownTimer";
+import Votes from "../components/Votes";
 
 export default function HomePageVerified() {
   function handleWithdraw() {}
@@ -13,6 +15,7 @@ export default function HomePageVerified() {
   return (
     <div className={styles.profile}>
       <div className={styles.uniqueId}>
+        <h1>Voter Profile</h1>
         <h5># 43453456</h5>
         <p>
           <div>Reward: 5000 </div>
@@ -39,6 +42,17 @@ export default function HomePageVerified() {
           </div>
         </p>
       </div>
+      <hr style={{ opacity: "0.2", marginTop: "2rem" }} />
+      <div className={styles.timer_container}>
+        <h2>SUG Election: 28/10/2024</h2>
+        <h3>Started: 10:45am GMT +1</h3>
+        <h4>Ends:</h4>
+        <CountdownTimer />
+      </div>
+      <h2>Leaderboard</h2>
+      <p>329 voters</p>
+      <Votes />
+      <Footer />
     </div>
   );
 }

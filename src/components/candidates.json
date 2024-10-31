@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name": "Alice Johnson",
+        "category": "President",
+        "description": "A talented actress known for her versatile roles."
+    },
+    {
+        "id": 2,
+        "name": "Bob Smith",
+        "category": "Director Of Sport",
+        "description": "An award-winning actor with a career spanning over two decades."
+    },
+    {
+        "id": 3,
+        "name": "Charlie Brown",
+        "category": "Director of Socials",
+        "description": "A charismatic actor recognized for his supporting roles."
+    }
+]

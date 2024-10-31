@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./homepage.module.css";
-import Footer from "../components/Footer";
+import Footer from "./Footer";
 import UniqueId from "../components/UniqueID";
 import arrow from "../assets/arrow.svg";
 
@@ -20,7 +20,10 @@ export default function Homepage() {
         </nav>
         <UniqueId />
         <div onClick={handleKYC} className={styles.kyc}>
-          <div>KYC Verification</div> <div><img src={arrow} alt="" id={styles.img}/></div>
+          <div>KYC Verification</div>{" "}
+          <div>
+            <img src={arrow} alt="" id={styles.img} />
+          </div>
         </div>
         <Footer />
       </div>

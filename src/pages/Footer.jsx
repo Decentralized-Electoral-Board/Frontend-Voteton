@@ -10,11 +10,11 @@ export default function Footer() {
   const navigate = useNavigate();
 
   function handleHome() {
-    navigate("./");
+    navigate("./home");
   }
 
   function handleIcon() {
-    navigate("./");
+    navigate("./vote");
   }
 
   function handleVector() {
