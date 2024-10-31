@@ -1,0 +1,17 @@
+.button {
+    background-color: #2ecc40;
+    color: white;
+    width: 235px;
+    height: 64px;
+  
+    font-family: Inter;
+    font-weight: 300;
+    text-align: center;
+    color: #F7FFF8;
+    border-radius: 30px;
+    border-width: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }

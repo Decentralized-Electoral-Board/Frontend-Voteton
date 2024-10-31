@@ -1,0 +1,27 @@
+
+.loading {
+  position: absolute;
+  width: 167px;
+  height: 24px;
+  top: 414px;
+  left: 104px;
+}
+
+
+.button {
+  background-color: #2ecc40;
+  color: white;
+  width: 15rem;
+  height: 4rem;
+
+  font-family: Inter;
+  font-weight: 300;
+  text-align: center;
+  color: #F7FFF8;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  font-size: 14px;
+}
