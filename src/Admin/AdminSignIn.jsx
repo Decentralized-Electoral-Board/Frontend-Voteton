@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import styles from "./adminSignIn.module.css"
+import { useNavigate } from 'react-router-dom';
+
 
 export default function AdminSignIn(){
+    const navigate = useNavigate()
     const [username, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
@@ -22,6 +25,7 @@ export default function AdminSignIn(){
 
             // Handle successful authentication
             if (response.data.success) {
+                navigate("/createElection")
                 // Redirect to admin dashboard or store token in local storage
                 console.log('Admin signed in successfully:', response.data);
                 // e.g., localStorage.setItem('token', response.data.token);

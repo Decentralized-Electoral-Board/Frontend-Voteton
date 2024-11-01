@@ -19,23 +19,20 @@ function App() {
 
   return (
 
-    // <AdminSignIn/>
-    <CreateElection/>
 
-
-
-    // <Router>
-    //   <Routes>
-    //     <Route path="/" element={<LandingPage/>} />
-    //     <Route path="/welcome/successful" element={<SuccessfulLanding/>} />
-    //     <Route path="/welcome/successful/home" element={<Homepage/>} />
-    //     <Route path="/welcome/successful/home/KYC" element={<KYC/>} />
-    //     <Route path="/welcome/successful/home/KYC/homepage" element={<HomePageVerified/>} />
-    //     <Route path="/vote" element={<Vote/>} />
-    //     <Route path="/profile" element={<Profile/>} />
-    //     <Route path="/admin/signin" element={<AdminSignIn/>} />
-    //   </Routes>
-    // </Router>
+    <Router>
+      <Routes>
+        <Route path="/" element={<LandingPage/>} />
+        <Route path="/welcome/successful" element={<SuccessfulLanding/>} />
+        <Route path="/welcome/successful/home" element={<Homepage/>} />
+        <Route path="/welcome/successful/home/KYC" element={<KYC/>} />
+        <Route path="/welcome/successful/home/KYC/homepage" element={<HomePageVerified/>} />
+        <Route path="/vote" element={<Vote/>} />
+        <Route path="/profile" element={<Profile/>} />
+        <Route path="/admin/signin" element={<AdminSignIn/>} />
+        <Route path="/createElection" element={<CreateElection/>} />
+      </Routes>
+    </Router>
   )
 }
 
