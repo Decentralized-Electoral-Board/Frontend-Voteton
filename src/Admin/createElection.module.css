@@ -1,0 +1,44 @@
+.createElection {
+  background-color: white;
+  height: 100vh;
+  width: 100vw;
+  padding: 1rem;
+}
+h2 {
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: center;
+}
+.electionName {
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.category {
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.candidates {
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+button {
+  width: 205px;
+  height: 56px;
+  /* left: -4.5px; */
+  /* padding: 16px 24px 16px 24px; */
+  gap: 8px;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16.94px;
+  justify-content: center;
+  margin: auto;
+
+  border-radius: 10px;
+  background-color: rgba(46, 204, 64, 1);
+}

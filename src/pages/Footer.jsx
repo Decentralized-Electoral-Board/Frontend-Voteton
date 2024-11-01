@@ -10,15 +10,15 @@ export default function Footer() {
   const navigate = useNavigate();
 
   function handleHome() {
-    navigate("./home");
+    navigate("/home");
   }
 
   function handleIcon() {
-    navigate("./vote");
+    navigate("/vote");
   }
 
   function handleVector() {
-    navigate("./profile");
+    navigate("/profile");
   }
 
   return (
