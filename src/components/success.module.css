@@ -1,0 +1,41 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+  }
+  
+  .heading {
+    font-size: 28px;
+    color: #4CAF50;
+  }
+  
+  .message {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .idContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .electionID {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .copyButton {
+    padding: 5px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #4CAF50;
+    background-color: #fff;
+    color: #4CAF50;
+    cursor: pointer;
+  }
+  

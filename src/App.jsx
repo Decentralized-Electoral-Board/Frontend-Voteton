@@ -1,15 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css'
-import LandingPage from "./pages/LandingPage"
-import SuccessfulLanding from "./pages/SucessfulLanding"
-import Homepage from './pages/Homepage';
-import KYC from './pages/KYC';
-import Profile from './pages/Profile';
-import HomePageVerified from './pages/HomePageVerified';
+import GetStarted from './pages/GetStarted';
+import LandingPage from './pages/LandingPage';
 import Vote from './pages/Vote';
-import AdminSignIn from './Admin/AdminSignIn';
-import CreateElection from './Admin/CreateElection';
+import Create from './pages/Create';
+import Join from './pages/Join';
+import Success from './components/Success';
+
 
 
 
@@ -22,18 +20,18 @@ function App() {
 
     <Router>
       <Routes>
-        <Route path="/" element={<LandingPage/>} />
-        <Route path="/welcome/successful" element={<SuccessfulLanding/>} />
-        <Route path="/welcome/successful/home" element={<Homepage/>} />
-        <Route path="/welcome/successful/home/KYC" element={<KYC/>} />
-        <Route path="/welcome/successful/home/KYC/homepage" element={<HomePageVerified/>} />
-        <Route path="/vote" element={<Vote/>} />
-        <Route path="/profile" element={<Profile/>} />
-        <Route path="/admin/signin" element={<AdminSignIn/>} />
-        <Route path="/createElection" element={<CreateElection/>} />
+        <Route path="/" element={<GetStarted/>} />
+        <Route path="/homepage" element={<LandingPage/>} />
+        <Route path="/homepage/create" element={<Create/>} />
+        {/* <Route path="/homepage/create/success" element={<Success/>} /> */}
+        <Route path="/homepage/vote" element={<Vote/>} />
+        <Route path="/homepage/join" element={<Join />} />
+
       </Routes>
     </Router>
   )
 }
+
+        
 
 export default App

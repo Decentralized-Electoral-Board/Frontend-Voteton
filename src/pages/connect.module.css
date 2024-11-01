@@ -1,0 +1,36 @@
+h2{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    color: white;
+    margin-top: 30vh;
+}
+body{
+    background-image: url("../assets/background.svg");
+}
+p{
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+p .connected{
+    color: white;
+}
+
+button {
+    background: #2ecc40;
+    color: white;
+    width: 15rem;
+    height: 4rem;
+    font-family: Inter;
+    font-weight: 300;
+    text-align: center;
+    /* color: #F7FFF8; */
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    font-size: 14px;
+  }
