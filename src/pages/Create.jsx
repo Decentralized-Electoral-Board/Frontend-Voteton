@@ -1,14 +1,29 @@
-import React, { useState } from 'react';
-import styles from './create.module.css';
+import React, { useState } from "react";
+import styles from "./create.module.css";
+import { useNavigate } from "react-router-dom";
+
 // import { useNavigate } from 'react-router-dom';
 
+const categoryOptions = [
+  "President",
+  "Vice President",
+  "Director of Sports",
+  "Director of Socials",
+  "Director of Games",
+  "Secretary General",
+];
 
 export default function Create() {
+  const navigate = useNavigate()
+
+  function handleCreate(){
+    navigate("/homepage/create/success")
+  }
 
   const [formData, setFormData] = useState({
-    name: '',
-    categories: [''],
-    duration: ''
+    name: "",
+    categories: [""],
+    duration: "",
   });
 
   const handleInputChange = (e) => {
@@ -18,7 +33,7 @@ export default function Create() {
 
   const handleCategoryChange = (index, value) => {
     const updatedCategories = formData.categories.map((cat, i) =>
-      i === index ? value : cat
+      i === index ? value : cat,
     );
     setFormData((prevData) => ({ ...prevData, categories: updatedCategories }));
   };
@@ -26,26 +41,31 @@ export default function Create() {
   const addCategory = () => {
     setFormData((prevData) => ({
       ...prevData,
-      categories: [...prevData.categories, '']
+      categories: [...prevData.categories, ""],
     }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (formData.name && formData.duration && formData.categories.every(cat => cat)) {
-      console.log('Form submitted:', formData);
+    if (
+      formData.name &&
+      formData.duration &&
+      formData.categories.every((cat) => cat)
+    ) {
+      console.log("Form submitted:", formData);
       setFormData({
-        name: '',
-        categories: [''],
-        duration: ''
+        name: "",
+        categories: [""],
+        duration: "",
       });
     } else {
-      alert('Please fill out all fields.');
+      alert("Please fill out all fields.");
     }
   };
 
   return (
     <div className={styles.formContainer}>
+      <h1>Create Election</h1>
       <form onSubmit={handleSubmit}>
         <div className={styles.inputGroup}>
           <label className={styles.label}>Name:</label>
@@ -61,20 +81,34 @@ export default function Create() {
 
         <div className={styles.inputGroup}>
           {formData.categories.map((category, index) => (
-            <div key={index} className={styles.categoryContainer}>
-              <label className={styles.label}>{`Category ${index + 1}:`}</label>
-              <input
-                type="text"
+            <div key={index} >
+              <div className={styles.categoryContainer}>
+              <label className={styles.label}>{`Add Categories needed`}</label>
+              <button
+                type="button"
+                onClick={addCategory}
+                className={styles.addCategory}
+              >
+                +
+              </button>
+              </div>
+              <select
                 value={category}
                 onChange={(e) => handleCategoryChange(index, e.target.value)}
                 className={styles.input}
                 required
-              />
+              >
+                <option value="" disabled>
+                  Select a category
+                </option>
+                {categoryOptions.map((option) => (
+                  <option key={option} value={option}>
+                    {option}
+                  </option>
+                ))}
+              </select>
             </div>
           ))}
-          <button type="button" onClick={addCategory} className={styles.buttonStyle}>
-            Add Category
-          </button>
         </div>
 
         <div className={styles.inputGroup}>
@@ -89,7 +123,7 @@ export default function Create() {
           />
         </div>
 
-        <button type="submit" className={styles.buttonStyle} >
+        <button type="submit" className={styles.buttonStyle} onClick={handleCreate}>
           Submit
         </button>
       </form>

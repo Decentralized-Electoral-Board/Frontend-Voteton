@@ -1,9 +1,16 @@
 import React from 'react';
 import styles from './join.module.css';
 import data from "../components/joinData.json"
+import { useNavigate } from 'react-router-dom';
+
 
 
 export default function Join() {
+  const navigate = useNavigate()
+
+  function handleCategory(){
+    navigate("./cat")
+  }
   const { electionName, categories } = data;
 
   return (
@@ -12,9 +19,9 @@ export default function Join() {
       <p>Categories (Select the category you want to participate in):</p>
       <ul className={styles.categoryList}>
         {categories.map((category, index) => (
-          <li key={index} className={styles.categoryItem}>
+          <button onClick={handleCategory} key={index} className={styles.categoryItem}>
             {category}
-          </li>
+          </button >
         ))}
       </ul>
     </div>

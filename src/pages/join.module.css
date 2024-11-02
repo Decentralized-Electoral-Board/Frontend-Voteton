@@ -1,10 +1,11 @@
 .joinContainer {
     max-width: 600px;
-    margin: 0 auto;
+    margin:  auto;
     padding: 20px;
     background-color: #f4f4f4;
-    border-radius: 8px;
+    border-radius: 3rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: contain;
   }
   
   .categoryList {
@@ -13,9 +14,11 @@
   }
   
   .categoryItem {
-    background-color: #e6e6e6;
-    margin: 5px 0;
+    background-color: green;
+    margin-top: 2rem ;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 25px;
+    width: 100%;
   }
+  
   

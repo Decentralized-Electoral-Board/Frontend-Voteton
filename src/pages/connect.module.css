@@ -23,14 +23,13 @@ button {
     color: white;
     width: 15rem;
     height: 4rem;
-    font-family: Inter;
     font-weight: 300;
     text-align: center;
-    /* color: #F7FFF8; */
+    border-width: 0px;
     border-radius: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: auto;
-    font-size: 14px;
+    font-size: 1rem;
   }

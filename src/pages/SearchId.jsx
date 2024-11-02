@@ -1,6 +1,14 @@
 import React, { useState } from 'react';
+import styles from "./searchId.module.css"
+import { useNavigate } from 'react-router-dom';
 
-const ElectionSearchPage = () => {
+
+
+
+
+export default function SearchId(){
+  const navigate = useNavigate()
+
   const [searchID, setSearchID] = useState('');
   const [searchResult, setSearchResult] = useState(null);
   const [error, setError] = useState('');
@@ -17,6 +25,8 @@ const ElectionSearchPage = () => {
 
     if (result) {
       setSearchResult(result);
+      navigate("/homepage/searchId/vote2")
+
     } else {
       setError('No election found with this ID');
     }
@@ -57,51 +67,4 @@ const ElectionSearchPage = () => {
   );
 };
 
-const styles = {
-  container: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    height: '100vh',
-    textAlign: 'center',
-  },
-  heading: {
-    fontSize: '28px',
-    color: '#333',
-  },
-  searchContainer: {
-    display: 'flex',
-    alignItems: 'center',
-    gap: '10px',
-    marginTop: '20px',
-  },
-  input: {
-    padding: '8px',
-    fontSize: '16px',
-    width: '200px',
-  },
-  searchButton: {
-    padding: '8px 16px',
-    fontSize: '16px',
-    backgroundColor: '#4CAF50',
-    color: '#fff',
-    border: 'none',
-    borderRadius: '4px',
-    cursor: 'pointer',
-  },
-  error: {
-    color: 'red',
-    marginTop: '10px',
-  },
-  resultContainer: {
-    marginTop: '20px',
-    padding: '20px',
-    border: '1px solid #ddd',
-    borderRadius: '8px',
-    width: '300px',
-    textAlign: 'left',
-  },
-};
 
-export default ElectionSearchPage;

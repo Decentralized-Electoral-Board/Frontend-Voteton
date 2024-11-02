@@ -1,6 +1,14 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import styles from './cat.module.css';
 
-const Category = () => {
+export default function Cat() {
+  const navigate = useNavigate();
+
+  function handleJoin() {
+    navigate("/homepage/create/success");
+  }
+
   const [formData, setFormData] = useState({
     name: '',
     description: '',
@@ -31,46 +39,59 @@ const Category = () => {
   };
 
   return (
-    <div>
-    <h1>Category</h1>
+    <div className={styles.container}>
+      <h1 className={styles.heading}>Category</h1>
       <form onSubmit={handleSubmit}>
-        <div>
-          <label>Name:</label>
+        <div className={styles.inputGroup}>
+          <label className={styles.label}>Name:</label>
           <input
             type="text"
             name="name"
             value={formData.name}
             onChange={handleInputChange}
+            className={styles.input}
+            required
           />
         </div>
 
-        <div style={{ marginTop: '10px' }}>
-          <label>Description:</label>
+        <div className={styles.inputGroup}>
+          <label className={styles.label}>Description:</label>
           <textarea
             name="description"
             value={formData.description}
             onChange={handleInputChange}
+            className={`${styles.input} ${styles.textarea}`}
+            required
           />
         </div>
 
-        <div style={{ marginTop: '10px' }}>
-          <label>Photo:</label>
-          <input type="file" accept="image/*" onChange={handlePhotoChange} />
+        <div className={styles.inputGroup}>
+          <label className={styles.label}>Photo:</label>
+          <input
+            type="file"
+            accept="image/*"
+            onChange={handlePhotoChange}
+            className={styles.input}
+            required
+          />
           {formData.photoPreview && (
-            <div style={{ marginTop: '10px' }}>
+            <div className={styles.photoPreview}>
               <img
                 src={formData.photoPreview}
                 alt="Preview"
-                style={{ width: '100px', height: '100px', objectFit: 'cover' }}
               />
             </div>
           )}
         </div>
 
-        <button type="submit" style={{ marginTop: '20px' }}>Submit</button>
+        <button
+          onClick={handleJoin}
+          type="submit"
+          className={styles.button}
+        >
+          Submit
+        </button>
       </form>
     </div>
   );
-};
-
-export default Category;
+}
